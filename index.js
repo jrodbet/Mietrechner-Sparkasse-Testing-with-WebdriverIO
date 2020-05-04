@@ -50,14 +50,14 @@ const { remote } = require('webdriverio');
     const totalIn40Years = (rent*(Math.pow((interest+1),39)/interest)*12).toFixed(2);
 
     //Formating the values to string
-    var expectedRentIn10Years = String(rentIn10Years);
-    var expectedRentIn20Years = String(rentIn20Years);
-    var expectedRentIn30Years = String(rentIn30Years);
-    var expectedRentIn40Years = String(rentIn40Years);
-    var expectedAmmountIn10Years = String(totalIn10Years);
-    var expectedAmmountIn20Years = String(totalIn20Years);
-    var expectedAmmountIn30Years = String(totalIn30Years);
-    var expectedAmmountIn40Years = String(totalIn40Years);
+    let expectedRentIn10Years = String(rentIn10Years);
+    let expectedRentIn20Years = String(rentIn20Years);
+    let expectedRentIn30Years = String(rentIn30Years);
+    let expectedRentIn40Years = String(rentIn40Years);
+    let expectedAmmountIn10Years = String(totalIn10Years);
+    let expectedAmmountIn20Years = String(totalIn20Years);
+    let expectedAmmountIn30Years = String(totalIn30Years);
+    let expectedAmmountIn40Years = String(totalIn40Years);
 
     console.log('expected rent per month in 10 years: ', expectedRentIn10Years);
     console.log('expected rent per month in 20 years: ', expectedRentIn20Years);
@@ -77,35 +77,35 @@ const { remote } = require('webdriverio');
     const totalAmmountIn30Years = await (await browser.$('//*[@id="mr-miettabelle"]/table/tbody/tr[3]/td[3]')).getText();
     const totalAmmountIn40Years = await (await browser.$('//*[@id="mr-miettabelle"]/table/tbody/tr[4]/td[3]')).getText();
 
-    var calculatedRent10Years = rentPerMonthIn10Years.replace(',','.');
+    let calculatedRent10Years = rentPerMonthIn10Years.replace(',','.');
     if(calculatedRent10Years[1] === '.') {
         calculatedRent10Years = calculatedRent10Years.replace('.','');
     }
-    var calculatedRent20Years = rentPerMonthIn20Years.replace(',','.');
+    let calculatedRent20Years = rentPerMonthIn20Years.replace(',','.');
     if(calculatedRent20Years[1] === '.') {
         calculatedRent20Years = calculatedRent20Years.replace('.','');
     }
-    var calculatedRent30Years = rentPerMonthIn30Years.replace(',','.');
+    let calculatedRent30Years = rentPerMonthIn30Years.replace(',','.');
     if(calculatedRent30Years[1] === '.') {
         calculatedRent30Years = calculatedRent30Years.replace('.','');
     }
-    var calculatedRent40Years = rentPerMonthIn40Years.replace(',','.');
+    let calculatedRent40Years = rentPerMonthIn40Years.replace(',','.');
     if(calculatedRent40Years[1] === '.') {
         calculatedRent40Years = calculatedRent40Years.replace('.','');
     }
-    var calculatedAmmount10Years = totalAmmountIn10Years.replace(',','.');
+    let calculatedAmmount10Years = totalAmmountIn10Years.replace(',','.');
     if(calculatedAmmount10Years[2] === '.' || calculatedAmmount10Years[3] === '.') {
         calculatedAmmount10Years = calculatedAmmount10Years.replace('.','');
     }
-    var calculatedAmmount20Years = totalAmmountIn20Years.replace(',','.');
+    let calculatedAmmount20Years = totalAmmountIn20Years.replace(',','.');
     if(calculatedAmmount20Years[2] === '.' || calculatedAmmount20Years[3] === '.') {
         calculatedAmmount20Years = calculatedAmmount20Years.replace('.','');
     }
-    var calculatedAmmount30Years = totalAmmountIn30Years.replace(',','.');
+    let calculatedAmmount30Years = totalAmmountIn30Years.replace(',','.');
     if(calculatedAmmount30Years[2] === '.' || calculatedAmmount30Years[3] === '.') {
         calculatedAmmount30Years = calculatedAmmount30Years.replace('.','');
     }
-    var calculatedAmmount40Years = totalAmmountIn40Years.replace(',','.');
+    let calculatedAmmount40Years = totalAmmountIn40Years.replace(',','.');
     if(calculatedAmmount40Years[2] === '.' || calculatedAmmount40Years[3] === '.') {
         calculatedAmmount40Years = calculatedAmmount40Years.replace('.','');
     }
