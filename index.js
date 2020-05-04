@@ -13,9 +13,9 @@ const { remote } = require('webdriverio');
     });
 
     //Assuming a rent of 500 Euros and a increase rate of 5% for testing pruposes
-    let rent = 500;
-    let increase = 5;
-    let interest = increase / 100;
+    const rent = 500;
+    const increase = 5;
+    const interest = increase / 100;
 
     await browser.url('https://www.sparkasse.de/service/rechner/mietrechner.html'); 
     
